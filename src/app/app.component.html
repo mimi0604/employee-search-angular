@@ -1,0 +1,8 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div id="page-wrapper">
+  <h1> Employee Information </h1>
+<ul class="list-group">
+  <app-employee-filter></app-employee-filter>
+  <app-employee *ngFor="let employee of employees" [employee]="employee"></app-employee>
+</ul>
+</div>

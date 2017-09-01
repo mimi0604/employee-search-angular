@@ -1,0 +1,15 @@
+<div class="row">
+        <div class="col-xs-9 col-sm-10">
+                <div class="form-group">
+<input #filter (keyup)='autoComplete(filter.value)' class="light" placeholder="Start typing a name e.g. Tom" list="names" >
+                </div>
+        </div>
+        <div class="col-xs-3 col-sm-2">
+                <div class="form-group">
+                        <button (click)='search(filter.value)'><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                </div>
+        </div>
+</div>
+<datalist id="names">
+      <option  *ngFor="let employeeOption of employeeOptions| async" >{{employeeOption.firstname}} {{employeeOption.surname}}</option>
+</datalist>
